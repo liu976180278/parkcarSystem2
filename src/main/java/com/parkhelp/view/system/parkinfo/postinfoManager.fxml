@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.parkinfo.PostUpdateController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="490.0" prefWidth="783.0" style="-fx-border-width: 5;-fx-border-color: #1C6BA6;">
+         <children>
+            <AnchorPane fx:id="userinfoPane" layoutX="51.0" layoutY="78.0" prefHeight="351.0" prefWidth="710.0">
+               <children>
+                  <VBox layoutX="125.0" layoutY="14.0" prefHeight="86.0" prefWidth="102.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="岗亭名车" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="岗亭类型" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="237.0" layoutY="26.0" prefHeight="74.0" prefWidth="136.0">
+                     <children>
+                        <TextField fx:id="post_name">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="post_type" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ChoiceBox>
+                     </children>
+                  </VBox>
+                  <Label layoutX="125.0" layoutY="142.0" prefHeight="41.0" prefWidth="92.0" text="备注" />
+                  <TextArea fx:id="remark" layoutX="176.0" layoutY="153.0" prefHeight="95.0" prefWidth="376.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnOk" layoutX="272.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="提    交" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="title" alignment="CENTER" layoutX="5.0" layoutY="7.0" prefHeight="20.0" prefWidth="751.0" style="-fx-background-color: #1C6BA6;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNo" layoutX="412.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #d9534f;" text="取    消" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

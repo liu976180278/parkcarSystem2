@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.SystemController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="1241.0" style="-fx-background-color: #D2E9FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="6.0" layoutY="11.0" prefHeight="29.0" prefWidth="171.0" text="系统设置">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TreeView fx:id="treeView" layoutY="58.0" prefHeight="528.0" prefWidth="200.0" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TreeView>
+      <AnchorPane fx:id="systemPane" layoutX="213.0" layoutY="55.0" prefHeight="290.0" prefWidth="921.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0" />
+   </children>
+</AnchorPane>

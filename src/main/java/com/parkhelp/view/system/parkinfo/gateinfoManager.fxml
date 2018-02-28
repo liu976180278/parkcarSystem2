@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.parkinfo.GeteUpdateController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="490.0" prefWidth="783.0" style="-fx-border-width: 5;-fx-border-color: #1C6BA6;">
+         <children>
+            <AnchorPane fx:id="gatePane" layoutX="51.0" layoutY="94.0" prefHeight="335.0" prefWidth="710.0">
+               <children>
+                  <VBox layoutX="34.0" layoutY="14.0" prefHeight="259.0" prefWidth="112.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="通道名称" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="通道类型" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="摄像头品牌" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="通道序号" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="所属区域" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="所属岗亭" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="147.0" layoutY="27.0" prefHeight="119.0" prefWidth="136.0">
+                     <children>
+                        <TextField fx:id="gatename">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="gatetype" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="camera_brand" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="ordernum" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="zone_id" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="post_id" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="494.0" layoutY="27.0" prefHeight="112.0" prefWidth="136.0">
+                     <children>
+                        <TextField fx:id="gateno">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="cameraIp">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="gategroup">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="ledip">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="led_brand" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="385.0" layoutY="14.0" prefHeight="259.0" prefWidth="112.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="通道编号" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="摄像头IP地址" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="通道分组" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="LED IP" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="LED 品牌" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnOk" layoutX="272.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="提    交" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="title" alignment="CENTER" layoutX="5.0" layoutY="7.0" prefHeight="20.0" prefWidth="751.0" style="-fx-background-color: #1C6BA6;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNo" layoutX="412.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #d9534f;" text="取    消" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.system.parkinfo.ParkZoneInfoMapper">
+	<resultMap id="parkZoneInfo" type="com.parkhelp.po.system.parkinfo.ParkZoneInfo">
+		<id column="id" property="id" />
+		<result column="dbStatus" property="dbStatus" />
+		<result column="updatetime" property="updatetime" />
+		<result column="zonecount" property="zonecount" />
+		<result column="zonefreecount" property="zonefreecount" />
+		<result column="zonename" property="zonename" />
+		<result column="vipcarcount" property="vipcarcount" />
+		<result column="maxtempcar" property="maxtempcar" />
+		<result column="billingindex_id" property="billingindex_id" />
+		<result column="parkno_id" property="parkno_id" />
+		<association property="parkinfo" javaType="com.parkhelp.po.system.parkinfo.ParkInfo" column="parkno_id" select="com.parkhelp.dao.system.parkinfo.ParkInfoMapper.findById"/> 
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.system.parkinfo.ParkZoneInfo"
+		resultMap="parkZoneInfo">
+		SELECT * FROM t_parkzoneinfo
+		<where>
+			<if test="zonename!=null and zonename!=''">
+				and zonename like '%${zonename}%'
+			</if>
+		</where>
+	</select>
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="parkZoneInfo">
+		SELECT * FROM  t_parkzoneinfo WHERE id=#{id}
+	</select>
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_parkzoneinfo where
+		id=#{id}
+	</delete>
+	<update id="update" parameterType="com.parkhelp.po.system.parkinfo.ParkZoneInfo">
+		update t_parkzoneinfo set
+	 	dbStatus=#{dbStatus},
+	 	updatetime=#{updatetime},
+	 	zonecount=#{zonecount},
+	 	zonefreecount=#{zonefreecount},
+	 	zonename=#{zonename},
+	 	parkno_id=#{parkno_id},
+	 	vipcarcount=#{vipcarcount},
+	 	maxtempcar=#{maxtempcar},
+	 	billingindex_id=#{billingindex_id}
+		where id=#{id}
+	</update>
+	<insert id="add" parameterType="com.parkhelp.po.system.parkinfo.ParkZoneInfo"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'-', '') from dual
+		</selectKey>
+		insert into t_parkzoneinfo(
+		id,
+	 	dbStatus,
+	  	updatetime,
+	 	zonecount,
+	 	zonefreecount,
+	 	zonename,
+	 	parkno_id,
+	 	vipcarcount,
+	 	maxtempcar,
+	 	billingindex_id
+		)
+		value(
+		#{id},
+		#{dbStatus},
+		#{updatetime},
+		#{zonecount},
+		#{zonefreecount},
+		#{zonename},
+		#{parkno_id},
+		#{vipcarcount},
+		#{maxtempcar},
+		#{billingindex_id}
+		)
+	</insert> 
+</mapper>
+
+

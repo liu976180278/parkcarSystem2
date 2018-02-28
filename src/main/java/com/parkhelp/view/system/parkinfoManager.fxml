@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.ParkInfoController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="90.0" prefWidth="1138.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="4.0" prefHeight="86.0" prefWidth="1124.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="45.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="130.0" text="停车场编号" />
+                        <Label prefHeight="25.0" prefWidth="133.0" text="停 车 厂 名" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="停车场类型" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="区  域  id" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="62.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="parkno1" prefHeight="25.0" prefWidth="130.0" />
+                        <Label fx:id="parkname1" prefHeight="25.0" prefWidth="133.0" />
+                        <Label fx:id="park_type1" prefHeight="27.0" prefWidth="133.0" />
+                        <Label fx:id="PARK_REGIONID1" prefHeight="27.0" prefWidth="133.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="130.0" text="地磁数量" />
+                        <Label prefHeight="25.0" prefWidth="133.0" text="停车场经度" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="停车场维度" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="录像机ip" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="PARK_BAYNUM1" prefHeight="25.0" prefWidth="130.0" />
+                        <Label fx:id="longitude1" prefHeight="25.0" prefWidth="133.0" />
+                        <Label fx:id="latitude1" prefHeight="27.0" prefWidth="133.0" />
+                        <Label fx:id="videoDiskRecorderIp1" prefHeight="27.0" prefWidth="133.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="94.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="130.0" text="停车场地址" />
+                        <Label prefHeight="25.0" prefWidth="133.0" text="停车场车位容量" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="现有空车位数" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="是否启用磁盘" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="parkaddress1" prefHeight="25.0" prefWidth="130.0" />
+                        <Label fx:id="spacecount1" prefHeight="25.0" prefWidth="133.0" />
+                        <Label fx:id="freecount1" prefHeight="27.0" prefWidth="133.0" />
+                        <Label fx:id="enableVideoDiskRecorder1" prefHeight="27.0" prefWidth="133.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="94.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="130.0" text="停车场图片" />
+                        <Label prefHeight="25.0" prefWidth="133.0" text="停车场说明" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="收费标准索引" />
+                        <Label prefHeight="25.0" prefWidth="133.0" text="停车场状态" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="parkphoto1" prefHeight="25.0" prefWidth="130.0" />
+                        <Label fx:id="remark1" prefHeight="25.0" prefWidth="133.0" />
+                        <Label fx:id="PARK_FEEINDEX1" prefHeight="27.0" prefWidth="133.0" />
+                        <Label fx:id="park_logon1" prefHeight="25.0" prefWidth="133.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="94.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="130.0" text="收费标准描述" />
+                        <Label prefHeight="25.0" prefWidth="133.0" text="收  费  评  分" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="免  费  时  长" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="PARK_FEEDESC1" prefHeight="25.0" prefWidth="130.0" />
+                        <Label fx:id="PARK_FEELEVEL1" prefHeight="25.0" prefWidth="133.0" />
+                        <Label fx:id="park_freetime1" prefHeight="27.0" prefWidth="133.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="94.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="130.0" text="运营商id" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="停车场子类型" />
+                        <Label prefHeight="27.0" prefWidth="133.0" text="数据状态" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="79.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="park_agentid1" prefHeight="25.0" prefWidth="130.0" />
+                        <Label fx:id="park_subtype1" prefHeight="27.0" prefWidth="133.0" />
+                        <Label fx:id="dbStatus1" prefHeight="27.0" prefWidth="133.0" />
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="86.0" prefWidth="121.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="btnUpdatePark" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="89.0" style="-fx-base: #1C6BA6;" text="修    改" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="7.0" layoutY="90.0" prefHeight="439.0" prefWidth="1138.0" style="-fx-background-color: #9D9D9D;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tablePostinfo" layoutY="32.0" prefHeight="184.0" prefWidth="566.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="37.0">
+                     <columns>
+                        <TableColumn fx:id="id2" prefWidth="75.0" text="岗亭编号" />
+                        <TableColumn fx:id="parkname2" prefWidth="75.0" text="停车场名称" />
+                        <TableColumn fx:id="post_name2" prefWidth="75.0" text="岗亭名称" />
+                        <TableColumn fx:id="post_type2" prefWidth="75.0" text="岗亭类型" />
+                        <TableColumn fx:id="remark2" prefWidth="75.0" text="备注" />
+                        <TableColumn fx:id="dbstatus2" prefWidth="75.0" text="数据状态" />
+                     </columns>
+                  </TableView>
+                  <ToolBar layoutY="-4.0" prefHeight="20.0" prefWidth="566.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="3.0">
+                     <items>
+                        <Label prefHeight="26.0" prefWidth="69.0" text="岗亭管理" />
+                        <Button fx:id="btnAddPost" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="新增" />
+                        <Button fx:id="btnDeletePost" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="删除" />
+                        <Button fx:id="btnUpdatePost" mnemonicParsing="false" prefHeight="4.0" prefWidth="57.0" text="修改" />
+                        <Button fx:id="btnDetailPost" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="查看" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <TableView fx:id="tableZone" layoutY="37.0" prefHeight="180.0" prefWidth="563.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="37.0">
+                     <columns>
+                        <TableColumn fx:id="id3" prefWidth="75.0" text="区域编号" />
+                        <TableColumn fx:id="zonename3" prefWidth="75.0" text="区域名称" />
+                        <TableColumn fx:id="zonecount3" prefWidth="98.0" text="普通车位总数" />
+                        <TableColumn fx:id="vipcarcount3" prefWidth="98.0" text="专用车位总数" />
+                        <TableColumn fx:id="maxtempcar3" prefWidth="98.0" text="最大临时停车数" />
+                        <TableColumn fx:id="zonefreecount3" prefWidth="98.0" text="现有空车位" />
+                        <TableColumn fx:id="billingindex_id3" prefWidth="98.0" text="收费规则" />
+                        <TableColumn prefWidth="98.0" text="禁入类型" />
+                        <TableColumn fx:id="updatetime3" prefWidth="98.0" text="变更时间" />
+                        <TableColumn fx:id="dbStatus3" prefWidth="98.0" text="数据状态" />
+                     </columns>
+                  </TableView>
+                  <ToolBar layoutX="30.0" layoutY="-8.0" prefHeight="36.0" prefWidth="569.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                     <items>
+                        <Label prefHeight="26.0" prefWidth="69.0" text="区域管理" />
+                        <Button fx:id="btnAddZone" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="新增" />
+                        <Button fx:id="btnDeleteZone" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="删除" />
+                        <Button fx:id="btnUpdateZone" mnemonicParsing="false" prefHeight="4.0" prefWidth="57.0" text="修改" />
+                        <Button fx:id="btnDetailZone" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="查看" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="tableLed" layoutY="35.0" prefHeight="248.0" prefWidth="566.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="39.0">
+                     <columns>
+                        <TableColumn fx:id="ledname" prefWidth="75.0" text="诱导屏名称" />
+                        <TableColumn fx:id="zone_id" prefWidth="88.0" text="所属区域" />
+                        <TableColumn fx:id="ledbrand" prefWidth="100.0" text="诱导屏型号" />
+                        <TableColumn fx:id="cardaddress" prefWidth="100.0" text="控制器地址" />
+                        <TableColumn fx:id="ledip" prefWidth="100.0" text="诱导屏IP" />
+                        <TableColumn fx:id="numcount" prefWidth="100.0" text="数字位数" />
+                        <TableColumn fx:id="actiontype" prefWidth="100.0" text="显示方式" />
+                        <TableColumn fx:id="actionspeed" prefWidth="100.0" text="显示速度" />
+                        <TableColumn fx:id="partWidth" prefWidth="100.0" text="分区宽度" />
+                        <TableColumn fx:id="partHeight" prefWidth="100.0" text="分区高度" />
+                        <TableColumn fx:id="coordinateX" prefWidth="75.0" text="分区坐标X" />
+                        <TableColumn fx:id="coordinateY" prefWidth="75.0" text="分区坐标Y" />
+                        <TableColumn fx:id="fontsize" prefWidth="75.0" text="字体大小" />
+                        <TableColumn fx:id="isused" prefWidth="75.0" text="是否启用" />
+                        <TableColumn fx:id="fontbold" prefWidth="75.0" text="字体粗细" />
+                        <TableColumn fx:id="holdtime" prefWidth="75.0" text="停留时间" />
+                        <TableColumn fx:id="texttmp" prefWidth="75.0" text="文本模板" />
+                     </columns>
+                  </TableView>
+                  <ToolBar prefHeight="36.0" prefWidth="569.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="2.0">
+                     <items>
+                        <Label prefHeight="26.0" prefWidth="69.0" text="诱导屏管理" />
+                        <Button fx:id="btnAddLed" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="新增" />
+                        <Button fx:id="btnDeleteLed" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="删除" />
+                        <Button fx:id="btnUpdateLed" mnemonicParsing="false" prefHeight="4.0" prefWidth="57.0" text="修改" />
+                        <Button fx:id="btnDetailLed" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="查看" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="tableGateInfo" layoutY="39.0" prefHeight="248.0" prefWidth="566.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="39.0">
+                     <columns>
+                        <TableColumn fx:id="ordernum4" prefWidth="75.0" text="通道序号" />
+                        <TableColumn fx:id="gatename4" prefWidth="75.0" text="通道名称" />
+                        <TableColumn fx:id="zone_id4" prefWidth="75.0" text="所属片区" />
+                        <TableColumn fx:id="post_id4" prefWidth="75.0" text="所属岗亭" />
+                        <TableColumn fx:id="gateno4" prefWidth="86.0" text="通道编号" />
+                        <TableColumn fx:id="cameraIp4" prefWidth="85.0" text="摄像头ip" />
+                        <TableColumn fx:id="videoChannelNum4" prefWidth="103.0" text="录像机通道" />
+                        <TableColumn fx:id="ledip4" prefWidth="26.0" text="LED IP" />
+                        <TableColumn fx:id="led_brand4" prefWidth="75.0" text="LED 品牌" />
+                        <TableColumn fx:id="gategroup4" prefWidth="75.0" text="通道分组" />
+                        <TableColumn fx:id="remark4" prefWidth="75.0" text="备注" />
+                        <TableColumn fx:id="dbStatus4" prefWidth="75.0" text="数据状态" />
+                     </columns>
+                  </TableView>
+                  <ToolBar prefHeight="36.0" prefWidth="566.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <items>
+                        <Label prefHeight="26.0" prefWidth="69.0" text="通道管理" />
+                        <Button fx:id="btnAddGate" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="新增" />
+                        <Button fx:id="btnDeleteGate" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="删除" />
+                        <Button fx:id="btnUpdateGate" mnemonicParsing="false" prefHeight="4.0" prefWidth="57.0" text="修改" />
+                        <Button fx:id="btnDetailGate" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="查看" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.billing.ExtraBillingMapper">
+	<resultMap id="extraBilling" type="com.parkhelp.po.billing.ExtraBilling">
+		<id column="id" property="id" />
+		<result column="cartype" property="cartype" />
+		<result column="rule" property="rule" />
+		<result column="remark" property="remark" />
+		<result column="free_time" property="free_time" />
+		<result column="billingindex_id" property="billingindex_id" />
+		<result column="day_cost_limit" property="day_cost_limit" />
+		<result column="supplement_type" property="supplement_type" />
+		<result column="charge_type" property="charge_type" />
+		<result column="cost_limit" property="cost_limit" />
+		<result column="is_naturalday" property="is_naturalday" />
+		<result column="is_drools" property="is_drools" />
+		<result column="day_part" property="day_part" />
+		<result column="night_part" property="night_part" />
+		<association property="billindex"
+			javaType="com.parkhelp.po.billing.Billindex" column="billingindex_id"
+			select="com.parkhelp.dao.billing.BillindexMapper.findById" />
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.billing.ExtraBilling"
+		resultMap="extraBilling">
+		SELECT * FROM t_extra_billing
+	</select>
+	
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="extraBilling">
+		SELECT * FROM  t_extra_billing WHERE id=#{id}
+	</select>
+	
+	<!-- <insert id="addUserInfo" parameterType="com.parkhelp.po.system.UserInfo"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'-', '') from dual
+		</selectKey>
+		insert into t_userinfo(
+		id,
+	 	age,
+	  	createdTime,
+	 	creater,
+		dbStatus,
+	 	loginname,
+		password,
+		remark,
+		role,
+		sex,
+		telnum,
+	 	updatedTime,
+		updater,
+		username,
+		workNo,
+	 	parkid_id,
+	 	batchno,
+	 	work_status
+		)
+		value(
+		#{id},
+	 	#{age},
+	  	#{createdTime},
+	 	#{creater},
+		#{dbStatus},
+	 	#{loginname},
+		#{password},
+		#{remark},
+		#{role},
+		#{sex},
+		#{telnum},
+	 	#{updatedTime},
+		#{updater},
+		#{username},
+		#{workNo},
+	 	#{parkid_id},
+	 	#{batchno},
+	 	#{work_status}
+		)
+	</insert> 
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_userinfo where
+		id=#{id}
+	</delete>
+	<update id="update" parameterType="com.parkhelp.po.system.UserInfo">
+		update t_userinfo set
+	 	age=#{age},
+	  	createdTime=#{createdTime},
+	 	creater=#{creater},
+		dbStatus=#{dbStatus},
+	 	loginname=#{loginname},
+		password=#{password},
+		remark=#{remark},
+		role=#{role},
+		sex=#{sex},
+		telnum=#{telnum},
+	 	updatedTime=#{updatedTime},
+		updater=#{updater},
+		username=#{username},
+		workNo=#{workNo},
+	 	parkid_id=#{parkid_id},
+	 	batchno=#{batchno},
+	 	work_status=#{work_status}
+		where id=#{id}
+	</update> -->
+</mapper>
+
+

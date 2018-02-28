@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 加载 映射文件 -->
+	<mappers>
+		<!-- 通过路径加载
+		<mapper resource="WEB-INF/config/DriverMapper.xml"/> -->
+		<!-- 下面两种mapper.java 和mapper.xml在同一文件下 -->
+		<!-- 通过接口加载
+		<mapper class="com.winphone.mapper.DriverMapper"/> -->
+		<!-- 包加载最常用 -->
+		<package name="com.parkhelp.dao.system"/>
+	</mappers>
+</configuration>

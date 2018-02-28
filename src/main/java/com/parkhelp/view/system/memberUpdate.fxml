@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="603.0" style="-fx-background-color: #FAF0E6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.MemberUpdateController">
+   <children>
+      <VBox layoutX="66.0" layoutY="13.0" prefHeight="339.0" prefWidth="573.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="444.0" text="姓名：" />
+            <TextField fx:id="carowner" prefHeight="37.0" prefWidth="305.0" />
+            <Label prefHeight="28.0" prefWidth="443.0" text="电话号码：" />
+            <TextField fx:id="telno" prefHeight="36.0" prefWidth="442.0" />
+            <Label prefHeight="28.0" prefWidth="443.0" text="车牌号码：" />
+            <TextField fx:id="carno" prefHeight="36.0" prefWidth="442.0" />
+            <Label prefHeight="28.0" prefWidth="443.0" text="车牌颜色：" />
+            <HBox fx:id="clolorHbox" prefHeight="34.0" prefWidth="573.0" />
+            <Label prefHeight="28.0" prefWidth="443.0" text="车牌类型：" />
+            <HBox fx:id="carTypeHbox" prefHeight="34.0" prefWidth="573.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btnOk" layoutX="68.0" layoutY="360.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="469.0" text="提交" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnNo" layoutX="69.0" layoutY="410.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="469.0" text="取消" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+   </children>
+</AnchorPane>

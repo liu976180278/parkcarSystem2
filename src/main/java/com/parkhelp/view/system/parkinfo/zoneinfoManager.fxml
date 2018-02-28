@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.parkinfo.ZoneUpdateController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="490.0" prefWidth="783.0" style="-fx-border-width: 5;-fx-border-color: #1C6BA6;">
+         <children>
+            <AnchorPane fx:id="zonePane" layoutX="51.0" layoutY="133.0" prefHeight="296.0" prefWidth="710.0">
+               <children>
+                  <VBox layoutX="34.0" layoutY="14.0" prefHeight="216.0" prefWidth="112.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="区域名称" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="现有空车位数" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="最大临时车位数" />
+                        <Label fx:id="sid" prefHeight="41.0" prefWidth="136.0" text="区域id" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="147.0" layoutY="27.0" prefHeight="119.0" prefWidth="136.0">
+                     <children>
+                        <TextField fx:id="zonename">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="zonefreecount" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="maxtempcar">
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="494.0" layoutY="27.0" prefHeight="112.0" prefWidth="136.0">
+                     <children>
+                        <TextField fx:id="zonecount">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="vipcarcount">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="billingindex_id" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="385.0" layoutY="14.0" prefHeight="216.0" prefWidth="112.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="普通车位总数" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="专用车位总数" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="收费规则" />
+                     </children>
+                  </VBox>
+                  <TextField fx:id="id" layoutX="146.0" layoutY="148.0" prefHeight="23.0" prefWidth="328.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnOk" layoutX="272.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="提    交" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="title" alignment="CENTER" layoutX="5.0" layoutY="7.0" prefHeight="20.0" prefWidth="751.0" style="-fx-background-color: #1C6BA6;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNo" layoutX="412.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #d9534f;" text="取    消" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

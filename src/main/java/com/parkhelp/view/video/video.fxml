@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.video.VideoController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="29.0" minHeight="0.0" minWidth="0.0" prefHeight="649.0" prefWidth="301.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <VBox prefHeight="363.0" prefWidth="132.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="164.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="293.0" text="停  车  场  信 息：">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="177.0" text="    场  内  停  车  位：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="271.0" text="    剩  余  停  车  位：" textFill="#f20018">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="353.0" text="    临  时  车  辆  数：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="386.0" text="    会  员  车  辆  数：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="33.0" prefWidth="293.0" text="收  费  信 息：">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="616.0" text="    操        作       员 ：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="232.0" text="    上    班    时    间 ：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="234.0" text="    异    常    放    行 ：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="242.0" text="    总        应        收：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="236.0" text="    非   现  金  实  收 ： ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="259.0" text="    优     惠    合    计：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="248.0" text="    现    金    实     收：" textFill="#f50212">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="293.0" text="本  次  计  费：">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="281.0" text="     计    费    时    长：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="204.0" text="     车    辆    类    型：">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="151.0" layoutY="2.0" prefHeight="277.0" prefWidth="156.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="156.0" text="150">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="183.0" text="150" textFill="#eb0d0d">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="207.0" text="45">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="194.0" text="15">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="182.0" text="管理员1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="3.0" top="33.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="186.0" text="2017-01-01 09：30">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="3.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="182.0" text="24">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="329.0" text="106元">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="156.0" text="0.0元">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="3.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="156.0" text="0.0元">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="324.0" text="106元" textFill="#fc0a0a">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="24.0" prefWidth="260.0" text="无">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="32.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="195.0" text="无" textFill="#f20404">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="82.0" layoutY="493.0" prefHeight="0.0" prefWidth="301.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="311.0" text="异常处理" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="619.0" text="收费0元">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="302.0" text="收费放行" textFill="#fffefe">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <ChoiceBox layoutX="151.0" layoutY="364.0" prefHeight="0.0" prefWidth="101.0" />
+            <ChoiceBox layoutX="151.0" layoutY="394.0" prefHeight="23.0" prefWidth="101.0" />
+            <Label layoutX="6.0" layoutY="393.0" prefHeight="24.0" prefWidth="139.0" text="     优     惠   规    则：">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="364.0" prefHeight="24.0" prefWidth="139.0" text="     车    牌    类    型 :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <SplitPane dividerPositions="0.5285935085007728" layoutX="10.0" layoutY="29.0" orientation="VERTICAL" prefHeight="650.0" prefWidth="1066.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
+         <items>
+            <SplitPane dividerPositions="0.4867674858223062" prefHeight="339.0" prefWidth="1064.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="260.0" prefWidth="241.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="243.0" prefHeight="24.0" prefWidth="86.0" text="入口" textFill="#11eef2" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="220.0" layoutY="242.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #2894FF;" text="开闸" textFill="#fcf9f9" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="150.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="319.0" layoutY="241.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #FFCBB3;" text="手动抓拍" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="30.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane fx:id="Apane" layoutX="22.0" layoutY="14.0" prefHeight="200.0" prefWidth="476.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="276.0" prefWidth="516.0" scaleZ="2.0">
+                     <children>
+                        <Label layoutX="108.0" layoutY="240.0" prefHeight="24.0" prefWidth="86.0" text="出口" textFill="#11eef2" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="324.0" layoutY="240.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #FFCBB3;" text="手动抓拍" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="30.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="194.0" layoutY="240.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="115.0" style="-fx-background-color: #2894FF;" text="开闸" textFill="#fcf9f9" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="150.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <MediaView fitHeight="220.0" fitWidth="400.0" layoutX="52.0" layoutY="14.0" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="453.0" prefWidth="943.0">
+               <children>
+                  <SplitPane dividerPositions="0.40512333965844405" layoutX="1.0" layoutY="29.0" prefHeight="294.0" prefWidth="1060.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="30.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="452.0">
+                           <children>
+                              <HBox layoutX="-3.0" prefHeight="30.0" prefWidth="390.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="116.0" text="入场流水（未确认）" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="99.0" text="入场流水（确认）" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="99.0" text="入场流水（正常）">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" text="入场流水（异常放行）">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font></Button>
+                                 </children>
+                              </HBox>
+                              <TableView layoutY="30.0" prefHeight="267.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <columns>
+                                    <TableColumn prefWidth="43.0" text="序号" />
+                                    <TableColumn prefWidth="90.0" text="车牌" />
+                                    <TableColumn prefWidth="133.0" text="出场时间" />
+                                    <TableColumn prefWidth="128.0" text="入场时间" />
+                                    <TableColumn prefWidth="43.0" text="状态" />
+                                    <TableColumn prefWidth="43.0" text="状态" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="585.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5" layoutX="-2.0" layoutY="1.0" prefHeight="292.0" prefWidth="661.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Label layoutX="4.0" prefHeight="23.0" prefWidth="132.0" text="进场信息" />
+                                          <Label layoutX="10.0" layoutY="21.0" prefHeight="41.0" prefWidth="189.0" style="-fx-background-color: blue;" text="   未   识  别" textFill="#f8f5f5">
+                                             <font>
+                                                <Font size="29.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="206.0" layoutY="21.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="匹配" textFill="#fcfafa">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="8.0" layoutY="66.0" prefHeight="32.0" prefWidth="270.0" style="-fx-background-color: #336666;" text="             暂无入场时间">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Label prefHeight="23.0" prefWidth="122.0" text="出场信息" />
+                                          <Label layoutX="1.0" layoutY="25.0" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: blue;" text="   未   识  别" textFill="#f8f5f5">
+                                             <font>
+                                                <Font size="29.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="208.0" layoutY="25.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="重置" textFill="#fcfafa">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="1.0" layoutY="66.0" prefHeight="32.0" prefWidth="283.0" style="-fx-background-color: #336666;" text="             暂无出场时间">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+                  <Label layoutX="23.0" layoutY="3.0" prefHeight="24.0" prefWidth="68.0" text="停车信息" textFill="#e41515" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Pane layoutX="14.0" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: #D2E9FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="11.0" layoutY="2.0" prefHeight="0.0" prefWidth="171.0" text="视屏监控">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

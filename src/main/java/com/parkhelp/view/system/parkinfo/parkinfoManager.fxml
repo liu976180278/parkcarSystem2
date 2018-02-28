@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.parkinfo.ParkUpdateController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="490.0" prefWidth="783.0" style="-fx-border-width: 5;-fx-border-color: #1C6BA6;">
+         <children>
+            <AnchorPane fx:id="userinfoPane" layoutX="51.0" layoutY="78.0" prefHeight="351.0" prefWidth="710.0">
+               <children>
+                  <VBox layoutX="51.0" layoutY="7.0" prefHeight="349.0" prefWidth="86.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车编号">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="区域归属id">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场经度">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场地址">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="空车位数">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场说明">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="免费时长">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场类型">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="运营商id">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="磁盘录像机">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="137.0" layoutY="13.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="278.0" prefWidth="165.0">
+                     <children>
+                        <TextField fx:id="parkno">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="PARK_REGIONID">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="longitude">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="parkaddress">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="freecount">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="remark">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="park_freetime">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="park_type" prefHeight="23.0" prefWidth="215.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="park_agentid">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="enableVideoDiskRecorder" prefHeight="23.0" prefWidth="215.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="495.0" layoutY="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="278.0" prefWidth="165.0">
+                     <children>
+                        <TextField fx:id="parkname">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="PARK_BAYNUM">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="latitude">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="spacecount">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="parkphoto">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="PARK_FEEINDEX">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="PARK_FEELEVEL">
+                           <VBox.margin>
+                              <Insets bottom="7.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="park_logon" prefHeight="23.0" prefWidth="215.0">
+                           <VBox.margin>
+                              <Insets bottom="8.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="park_subtype" prefHeight="23.0" prefWidth="215.0">
+                           <VBox.margin>
+                              <Insets bottom="8.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="videoDiskRecorderIp">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="PARK_FEEDESC" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="403.0" layoutY="1.0" prefHeight="349.0" prefWidth="92.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场场名">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="地磁数量">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场维度">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="车位总数">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场图片">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="收费标准索引">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="收费评分">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场状态">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="停车场子类型">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="磁盘录像ip">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="收费标准描述">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnOk" layoutX="272.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="提    交" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="title" alignment="CENTER" layoutX="5.0" layoutY="7.0" prefHeight="20.0" prefWidth="751.0" style="-fx-background-color: #1C6BA6;" text="停车场信息修改" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNo" layoutX="412.0" layoutY="429.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #d9534f;" text="取    消" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.MemberController">
+   <children>
+      <SplitPane dividerPositions="0.16824196597353497" orientation="VERTICAL" prefHeight="520.0" prefWidth="1104.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="111.0" prefWidth="1191.0">
+               <children>
+                  <Label layoutX="65.0" layoutY="21.0" prefHeight="15.0" prefWidth="116.0" text="车牌号" />
+                  <TextField fx:id="textCarno" layoutX="192.0" layoutY="17.0" />
+                  <Label layoutX="65.0" layoutY="54.0" prefHeight="15.0" prefWidth="116.0" text="车主联系电话" />
+                  <TextField fx:id="textPhone" layoutX="192.0" layoutY="50.0" />
+                  <Label layoutX="440.0" layoutY="21.0" prefHeight="15.0" prefWidth="116.0" text="车主姓名" />
+                  <TextField fx:id="textName" layoutX="563.0" layoutY="17.0" />
+                  <TextField layoutX="563.0" layoutY="50.0" />
+                  <Label layoutX="440.0" layoutY="54.0" prefHeight="15.0" prefWidth="116.0" text="数据状态" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="432.0" prefWidth="1112.0">
+               <children>
+                  <TableView fx:id="memberTable" layoutX="-2.0" layoutY="48.0" prefHeight="376.0" prefWidth="1104.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="50.0">
+                    <columns>
+                      <TableColumn prefWidth="50.0" text="序号" fx:id="xuhao" />
+                      <TableColumn fx:id="carno" prefWidth="100.0" text="车牌号码" />
+                        <TableColumn fx:id="carnocolor" minWidth="0.0" prefWidth="100.0" text="车牌颜色" />
+                        <TableColumn fx:id="balance" minWidth="2.0" prefWidth="100.0" text="账户余额" />
+                        <TableColumn fx:id="starttime" minWidth="0.0" prefWidth="150.0" text="有效开始时间" />
+                        <TableColumn fx:id="endtime" prefWidth="150.0" text="有效结束时间" />
+                        <TableColumn fx:id="cartype" prefWidth="100.0" text="车辆类型" />
+                        <TableColumn fx:id="zone_id" prefWidth="100.0" text="所在区域" />
+                        <TableColumn fx:id="carowner" minWidth="0.0" prefWidth="100.0" text="车主姓名" />
+                        <TableColumn fx:id="telno" prefWidth="150.0" text="电话号码" />
+                    </columns>
+                  </TableView>
+                  <ToolBar layoutY="-6.0" prefHeight="54.0" prefWidth="1104.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="12.0">
+                    <items>
+                      <Button fx:id="findmember" mnemonicParsing="false" prefHeight="37.0" prefWidth="125.0" text="查询" />
+                        <Button fx:id="addmember" mnemonicParsing="false" prefHeight="37.0" prefWidth="125.0" text="新增" />
+                        <Button fx:id="deletemember" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="删除" />
+                        <Button fx:id="updateMember" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="修改" />
+                        <Button fx:id="exportMember" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="导出" />
+                        <Button fx:id="importMember" mnemonicParsing="false" prefHeight="37.0" prefWidth="124.0" text="批量导入" />
+                        <Button disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="125.0" text="充值" />
+                        <Button disable="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="125.0" text="会员延期" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

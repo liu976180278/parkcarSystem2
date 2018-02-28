@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.system.MemberCarMapper">
+	<resultMap id="memberCar" type="com.parkhelp.po.system.MemberCar">
+		<id column="id" property="id" />
+		<result column="balance" property="balance" />
+		<result column="cargroupno" property="cargroupno" />
+		<result column="carno" property="carno" />
+		<result column="carnocolor" property="carnocolor" />
+		<result column="carowner" property="carowner" />
+		<result column="cartype" property="cartype" />
+		<result column="cartypeno" property="cartypeno" />
+		<result column="code" property="code" />
+		<result column="createdTime" property="createdTime" />
+		<result column="creater" property="creater" />
+		<result column="dbStatus" property="dbStatus" />
+		<result column="drivelicenseno" property="drivelicenseno" />
+		<result column="endtime" property="endtime" />
+		<result column="starttime" property="starttime" />
+		<result column="telno" property="telno" />
+		<result column="updatedTime" property="updatedTime" />
+		<result column="updater" property="updater" />
+		<result column="parkno_id" property="parkno_id" />
+		<result column="remark" property="remark" />
+		<result column="verrecno" property="verrecno" />
+		<result column="alarm_type" property="alarm_type" />
+		<result column="member_grade" property="member_grade" />
+		<result column="zone_id" property="zone_id" />
+		<result column="workno" property="workno" />
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.system.MemberCar"
+		resultMap="memberCar">
+		SELECT * FROM t_member_car
+		<where>
+			<if test="carno!=null and carno!=''">
+				and carno like '%${carno}%'
+			</if>
+			<if test="carowner!=null and carowner!=''">
+				and carowner like '%${carowner}%'
+			</if>
+			<if test="telno!=null and telno!=''">
+				and telno like '%${telno}%'
+			</if>
+		</where>
+		<!-- order by deliver_phone ${order} limit #{page},#{rows} -->
+	</select>
+	
+	<select id="findByCarno" parameterType="String"
+		resultMap="memberCar">
+		SELECT * FROM t_member_car where carno =#{carno}
+	</select>
+	
+	
+
+	<insert id="addMemberCar" parameterType="com.parkhelp.po.system.MemberCar"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'-', '') from dual
+		</selectKey>
+		insert into t_member_car(
+		id,
+		balance,
+		cargroupno,
+		carno,
+		carnocolor,
+		carowner,
+		cartype,
+		cartypeno,
+		code,
+		createdTime,
+		creater,
+		dbStatus,
+		drivelicenseno,
+		endtime,
+		starttime,
+		telno,
+		updatedTime,
+		updater,
+		parkno_id,
+		remark,
+		verrecno,
+		alarm_type,
+		member_grade,
+		zone_id
+		)
+		value(
+		#{id},
+		#{balance},
+		#{cargroupno},
+		#{carno},
+		#{carnocolor},
+		#{carowner},
+		#{cartype},
+		#{cartypeno},
+		#{code},
+		#{createdTime},
+		#{creater},
+		#{dbStatus},
+		#{drivelicenseno},
+		#{endtime},
+		#{starttime},
+		#{telno},
+		#{updatedTime},
+		#{updater},
+		#{parkno_id},
+		#{remark},
+		#{verrecno},
+		#{alarm_type},
+		#{member_grade},
+		#{zone_id}
+		)
+	</insert> 
+
+	<delete id="delete" parameterType="String">
+		delete from t_member_car where
+		id=#{id}
+	</delete>
+
+	<select id="findMemberCarById" parameterType="java.lang.String"
+		resultMap="memberCar">
+		SELECT * FROM t_member_car WHERE id=#{id}
+	</select>
+
+	<update id="update" parameterType="com.parkhelp.po.system.MemberCar">
+		update t_member_car set
+		balance=#{balance},
+		cargroupno=#{cargroupno},
+		carno=#{carno},
+		carnocolor=#{carnocolor},
+		carowner=#{carowner},
+		cartype=#{cartype},
+		cartypeno=#{cartypeno},
+		code=#{code},
+		createdTime=#{createdTime},
+		creater=#{creater},
+		dbStatus=#{dbStatus},
+		drivelicenseno=#{drivelicenseno},
+		endtime=#{endtime},
+		starttime=#{starttime},
+		telno=#{telno},
+		updatedTime=#{updatedTime},
+		updater=#{updater},
+		parkno_id=#{parkno_id},
+		remark=#{remark},
+		verrecno=#{verrecno},
+		alarm_type=#{alarm_type},
+		member_grade=#{member_grade},
+		zone_id=#{zone_id}
+		where id=#{id}
+	</update>
+
+
+
+	<!-- 返回总记录数 -->
+	<select id="findAllTotal" parameterType="com.parkhelp.po.system.MemberCar"
+		resultType="int">
+		SELECT COUNT(*) FROM t_member_car
+		<where>
+			<if test="name!=null and name!=''">
+				and carowner like '${carowner}%'
+			</if>
+		</where>
+	</select>
+
+	<!-- poi导入看账号存不存在 ,添加时候 -->
+	<!-- <select id="findUserByNum" parameterType="com.parkhelp.po.MemberCar" 
+		resultMap="driver"> SELECT * FROM t_member_car WHERE deliver_num=#{num} </select> -->
+
+	<!-- 添加是判断姓名存不存在json -->
+	<!-- <select id="findDriverByName" parameterType="com.parkhelp.po.MemberCar" 
+		resultMap="driver"> SELECT * FROM t_member_car WHERE deliver_driver=#{name} 
+		</select> -->
+</mapper>
+
+

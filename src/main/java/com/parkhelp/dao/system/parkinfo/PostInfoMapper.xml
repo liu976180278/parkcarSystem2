@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.system.parkinfo.PostInfoMapper">
+	<resultMap id="postInfo" type="com.parkhelp.po.system.parkinfo.PostInfo">
+		<id column="id" property="id" />
+		<result column="post_name" property="post_name" />
+		<result column="post_type" property="post_type" />
+		<result column="remark" property="remark" />
+		<result column="dbstatus" property="dbstatus" />
+		<result column="parkno_id" property="parkno_id" />
+		<association property="parkinfo" javaType="com.parkhelp.po.system.parkinfo.ParkInfo" column="parkno_id" select="com.parkhelp.dao.system.parkinfo.ParkInfoMapper.findById"/> 
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.system.parkinfo.PostInfo"
+		resultMap="postInfo">
+		SELECT * FROM t_postinfo
+		<where>
+		<if test="post_name!=null and post_name!=''">
+				and post_name like '%${post_name}%'
+		</if>
+		</where>
+	</select>
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="postInfo">
+		SELECT * FROM  t_postinfo WHERE id=#{id}
+	</select>
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_postinfo where
+		id=#{id}
+	</delete>
+	<update id="update" parameterType="com.parkhelp.po.system.parkinfo.PostInfo">
+		update t_postinfo set
+		post_name=#{post_name},
+	  	post_type=#{post_type},
+	  	remark=#{remark},
+	  	dbstatus=#{dbstatus},
+	  	parkno_id=#{parkno_id}
+		where id=#{id}
+	</update>
+		<insert id="add" parameterType="com.parkhelp.po.system.parkinfo.PostInfo"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'', '') from dual
+		</selectKey>
+		insert into t_postinfo(
+		id,
+		post_name,
+		post_type,
+		remark,
+		dbstatus,
+		parkno_id
+		)
+		value(
+		#{id},
+		#{post_name},
+		#{post_type},
+		#{remark},
+		#{dbstatus},
+		#{parkno_id}
+		)
+	</insert> 
+	
+</mapper>
+
+

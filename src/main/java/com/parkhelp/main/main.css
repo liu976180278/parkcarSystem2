@@ -1,0 +1,53 @@
+/*  AnchorPane:hover {
+	-fx-background-image: url(jfgl.png);
+     -fx-background-color: #97CBFF;
+} */
+.root {
+	-fx-font-family: "微软雅黑";
+	-fx-font-size: 15px;
+	-fx-background-size: stretch stretch;
+	-fx-background-position: center center;
+}
+.mybg1{
+	-fx-background-image: url(../image/main/menu_icon_checked.png);
+	-fx-background-size: stretch; 
+	-fx-background-position: center center;
+/* 	viedo.getStyleClass().add("mybg1");  然后你在你的css中写一个mybg1的类 */
+}
+
+#maintop {
+	-fx-background-image: url(../image/main/menu_bg.png);
+	-fx-background-repeat: no-repeat; 
+	-fx-background-color:#1d6ba6;
+}
+
+#mainfoot {
+	-fx-background-image: url(../image/main/menu_bg.png);
+}
+
+.table-row-cell:selected{
+    -fx-text-fill:  red ; 
+    /* -fx-background-color: #D1E9E9; */
+}
+.table-row-cell:hover{
+    -fx-background-color: #D1E9E9;
+    -fx-text-fill:  #000000 ;
+}
+.tree-cell:hover{
+    -fx-background-color: #D1E9E9;
+  	-fx-text-fill:  #000080 ; 
+}
+.tree-cell:selected{
+    -fx-background-color: #D1E9E9;
+  	-fx-text-fill:  #000080 ; 
+}
+
+#menu_icon:hover {
+	-fx-background-image: url(../image/main/menu_icon_checked.png);
+	-fx-background-size: stretch; 
+	-fx-background-position: center center;
+}
+#menu_icon:mouseover {
+	-fx-background-size: stretch; 
+	-fx-background-position: center center;
+}

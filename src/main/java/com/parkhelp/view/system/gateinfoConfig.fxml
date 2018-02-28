@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.GateinfoConfigController">
+   <children>
+      <TableView fx:id="gateTable" layoutX="3.0" layoutY="9.0" prefHeight="403.0" prefWidth="753.0" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="9.0">
+        <columns>
+          <TableColumn fx:id="isUsed" prefWidth="100.0" text="是否启用" />
+          <TableColumn fx:id="ordernum" prefWidth="100.0" text="通道序号" />
+            <TableColumn fx:id="gatename" minWidth="2.0" prefWidth="100.0" text="通道名称" />
+            <TableColumn fx:id="zone_id" minWidth="0.0" prefWidth="100.0" text="所属区域" />
+            <TableColumn fx:id="cameraIp" minWidth="0.0" prefWidth="180.0" text="摄像头IP" />
+            <TableColumn fx:id="ledip" prefWidth="180.0" text="LEDIP" />
+            <TableColumn fx:id="dbStatus" prefWidth="100.0" text="数据状态" />
+            <TableColumn fx:id="remark" prefWidth="100.0" text="备注" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnOk" layoutX="20.0" layoutY="425.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="保     存" textFill="WHITE" AnchorPane.bottomAnchor="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

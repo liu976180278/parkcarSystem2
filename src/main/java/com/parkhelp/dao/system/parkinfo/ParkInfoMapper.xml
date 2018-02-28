@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.system.parkinfo.ParkInfoMapper">
+	<resultMap id="parkInfo" type="com.parkhelp.po.system.parkinfo.ParkInfo">
+		<id column="id" property="id" />
+		<result column="PARK_BAYNUM" property="PARK_BAYNUM" />
+		<result column="PARK_FEEINDEX" property="PARK_FEEINDEX" />
+		<result column="PARK_FEEDESC" property="PARK_FEEDESC" />
+		<result column="PARK_FEELEVEL" property="PARK_FEELEVEL" />
+		<result column="PARK_REGIONID" property="PARK_REGIONID" />
+		<result column="dbStatus" property="dbStatus" />
+		<result column="enableVideoDiskRecorder" property="enableVideoDiskRecorder" />
+		<result column="freecount" property="freecount" />
+		<result column="latitude" property="latitude" />
+		<result column="longitude" property="longitude" />
+		<result column="park_agentid" property="park_agentid" />
+		<result column="park_freetime" property="park_freetime" />
+		<result column="park_logon" property="park_logon" />
+		<result column="park_subtype" property="park_subtype" />
+		<result column="park_type" property="park_type" />
+		<result column="parkaddress" property="parkaddress" />
+		<result column="parkname" property="parkname" />
+		<result column="parkno" property="parkno" />
+		<result column="parkphoto" property="parkphoto" />
+		<result column="remark" property="remark" />
+		<result column="spacecount" property="spacecount" />
+		<result column="membercount" property="membercount" />
+		<result column="temporarycount" property="temporarycount" />
+		<result column="videoDiskRecorderIp" property="videoDiskRecorderIp"/>
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.system.parkinfo.ParkInfo"
+		resultMap="parkInfo">
+		SELECT * FROM t_parkinfo
+	</select>
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="parkInfo">
+		SELECT * FROM  t_parkinfo WHERE id=#{id}
+	</select>
+	
+	<update id="update" parameterType="com.parkhelp.po.system.parkinfo.ParkInfo">
+		update t_parkinfo set
+	 	PARK_BAYNUM=#{PARK_BAYNUM},
+	 	PARK_FEEINDEX=#{PARK_FEEINDEX},
+	 	PARK_FEEDESC=#{PARK_FEEDESC},
+	 	PARK_FEELEVEL=#{PARK_FEELEVEL},
+	 	PARK_REGIONID=#{PARK_REGIONID},
+	 	dbStatus=#{dbStatus},
+	 	enableVideoDiskRecorder=#{enableVideoDiskRecorder},
+	 	freecount=#{freecount},
+	 	latitude=#{latitude},
+	 	longitude=#{longitude},
+	 	park_agentid=#{park_agentid},
+	 	park_freetime=#{park_freetime},
+	 	park_logon=#{park_logon},
+	 	park_subtype=#{park_subtype},
+	 	park_type=#{park_type},
+	 	parkaddress=#{parkaddress},
+	 	parkname=#{parkname},
+	 	parkno=#{parkno},
+	 	parkphoto=#{parkphoto},
+	 	remark=#{remark},
+	 	spacecount=#{spacecount},
+	 	membercount=#{membercount},
+	 	temporarycount=#{temporarycount},
+	 	videoDiskRecorderIp=#{videoDiskRecorderIp}
+		where id=#{id}
+	</update>
+	
+</mapper>
+
+

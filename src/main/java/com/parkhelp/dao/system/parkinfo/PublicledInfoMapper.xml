@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.system.parkinfo.PublicledInfoMapper">
+	<resultMap id="publicledInfo" type="com.parkhelp.po.system.parkinfo.PublicledInfo">
+		<id column="id" property="id" />
+		<result column="ledname" property="ledname" />
+		<result column="ledip" property="ledip" />
+		<result column="port" property="port" />
+		<result column="baudrate" property="baudrate" />
+		<result column="comname" property="comname" />
+		<result column="zone_id" property="zone_id" />
+		<result column="remark" property="remark" />
+		<result column="dbStatus" property="dbStatus" />
+		<result column="fontbold" property="fontbold" />
+		<result column="holdtime" property="holdtime" />
+		<result column="actionspeed" property="actionspeed" />
+		<result column="numcount" property="numcount" />
+		<result column="actiontype" property="actiontype" />
+		<result column="texttmp" property="texttmp" />
+		<result column="ledbrand" property="ledbrand" />
+		<result column="cardaddress" property="cardaddress" />
+		<result column="fontsize" property="fontsize" />
+		<result column="isused" property="isused" />
+		<result column="coordinateY" property="coordinateY" />
+		<result column="coordinateX" property="coordinateX" />
+		<result column="partHeight" property="partHeight" />
+		<result column="partWidth" property="partWidth" />
+		<association property="parkinfo"
+			javaType="com.parkhelp.po.system.parkinfo.ParkInfo" column="parkno_id"
+			select="com.parkhelp.dao.system.parkinfo.ParkInfoMapper.findById" />
+		<association property="parkZoneInfo"
+			javaType="com.parkhelp.po.system.parkinfo.ParkZoneInfo" column="zone_id"
+			select="com.parkhelp.dao.system.parkinfo.ParkZoneInfoMapper.findById" />
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.system.parkinfo.PublicledInfo"
+		resultMap="publicledInfo">
+		SELECT * FROM t_publicledinfo
+	</select>
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="publicledInfo">
+		SELECT * FROM t_publicledinfo WHERE id=#{id}
+	</select>
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_publicledinfo
+		where
+		id=#{id}
+	</delete>
+	<update id="update" parameterType="com.parkhelp.po.system.parkinfo.PublicledInfo">
+		update t_publicledinfo set
+		ledname=#{ledname},
+		ledip=#{ledip},
+		port=#{port},
+		baudrate=#{baudrate},
+		comname=#{comname},
+		zone_id=#{zone_id},
+		remark=#{remark},
+		dbStatus=#{dbStatus},
+		fontbold=#{fontbold},
+		holdtime=#{holdtime},
+		actionspeed=#{actionspeed},
+		numcount=#{numcount},
+		actiontype=#{actiontype},
+		texttmp=#{texttmp},
+		ledbrand=#{ledbrand},
+		cardaddress=#{cardaddress},
+		fontsize=#{fontsize},
+		isused=#{isused},
+		coordinateY=#{coordinateY},
+		coordinateX=#{coordinateX},
+		partHeight=#{partHeight},
+		partWidth=#{partWidth}
+		where id=#{id}
+	</update>
+	<insert id="add" parameterType="com.parkhelp.po.system.parkinfo.PublicledInfo"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'', '') from dual
+		</selectKey>
+		insert into t_publicledinfo(
+		id,
+		parkno_id,
+		ledname,
+		ledip,
+		port,
+		baudrate,
+		comname,
+		zone_id,
+		remark,
+		dbStatus,
+		fontbold,
+		holdtime,
+		actionspeed,
+		numcount,
+		actiontype,
+		texttmp,
+		ledbrand,
+		cardaddress,
+		fontsize,
+		isused,
+		coordinateY,
+		coordinateX,
+		partHeight,
+		partWidth
+		)
+		value(
+		#{id},
+		#{parkno_id},
+		#{ledname},
+		#{ledip},
+		#{port},
+		#{baudrate},
+		#{comname},
+		#{zone_id},
+		#{remark},
+		#{dbStatus},
+		#{fontbold},
+		#{holdtime},
+		#{actionspeed},
+		#{numcount},
+		#{actiontype},
+		#{texttmp},
+		#{ledbrand},
+		#{cardaddress},
+		#{fontsize},
+		#{isused},
+		#{coordinateY},
+		#{coordinateX},
+		#{partHeight},
+		#{partWidth}
+		)
+	</insert>
+
+</mapper>
+
+

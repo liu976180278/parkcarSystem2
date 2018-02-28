@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1456.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.billing.BillingMainController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="1241.0" style="-fx-background-color: #D2E9FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="6.0" layoutY="11.0" prefHeight="29.0" prefWidth="171.0" text="计费管理">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TreeView fx:id="treeView" layoutY="58.0" prefHeight="528.0" prefWidth="200.0" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TreeView>
+      <AnchorPane fx:id="billingPane" layoutX="213.0" layoutY="55.0" prefHeight="290.0" prefWidth="921.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <TableView layoutX="14.0" layoutY="37.0" prefHeight="137.0" prefWidth="1222.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="序号" />
+                <TableColumn prefWidth="75.0" text="车型" />
+                  <TableColumn prefWidth="75.0" text="免费时长" />
+                  <TableColumn prefWidth="75.0" text="收费总上限" />
+                  <TableColumn prefWidth="75.0" text="每日上限" />
+                  <TableColumn prefWidth="104.0" text="以24小时为一天" />
+                  <TableColumn prefWidth="104.0" text="启用特殊计费规则" />
+                  <TableColumn prefWidth="104.0" text="计费类型" />
+                  <TableColumn prefWidth="104.0" text="计费描述" />
+                  <TableColumn prefWidth="104.0" text="计费索引名称" />
+              </columns>
+            </TableView>
+            <ToolBar layoutX="15.0" layoutY="-6.0" prefHeight="43.0" prefWidth="1209.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <items>
+                  <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="99.0" style="-fx-background-color: #1adddd;" text=" 计费规则列表" textAlignment="CENTER" />
+                  <Button fx:id="btnAddPost" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="新增" />
+                  <Button fx:id="btnDeletePost" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="删除" />
+                  <Button fx:id="btnUpdatePost" mnemonicParsing="false" prefHeight="4.0" prefWidth="57.0" text="修改" />
+                  <Button fx:id="btnDetailPost" mnemonicParsing="false" prefHeight="24.0" prefWidth="57.0" text="查看" />
+               </items>
+            </ToolBar>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

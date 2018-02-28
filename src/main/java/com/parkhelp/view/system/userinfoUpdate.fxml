@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.UserInfoUpdateController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="490.0" prefWidth="783.0" style="-fx-border-width: 5;-fx-border-color: #1C6BA6;">
+         <children>
+            <AnchorPane fx:id="userinfoPane" layoutX="45.0" layoutY="85.0" prefHeight="281.0" prefWidth="660.0">
+               <children>
+                  <TextArea fx:id="remark" layoutX="147.0" layoutY="163.0" prefHeight="110.0" prefWidth="508.0" />
+                  <Label layoutX="74.0" layoutY="163.0" prefHeight="30.0" prefWidth="86.0" text="备注" />
+                  <VBox layoutX="502.0" layoutY="8.0" prefHeight="124.0" prefWidth="150.0">
+                     <children>
+                        <TextField fx:id="workNo" prefHeight="30.0" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="loginName" prefHeight="30.0" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="sex" prefHeight="27.0" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="role" prefHeight="27.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="410.0" prefHeight="154.0" prefWidth="92.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="92.0" text="单位工号" />
+                        <Label prefHeight="40.0" prefWidth="92.0" text="登录名" />
+                        <Label prefHeight="28.0" prefWidth="92.0" text="性别" />
+                        <Label prefHeight="35.0" prefWidth="92.0" text="本地权限" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="74.0" layoutY="15.0" prefHeight="124.0" prefWidth="86.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="姓名" />
+                        <Label prefHeight="30.0" prefWidth="92.0" text="出生日期" />
+                        <Label prefHeight="39.0" prefWidth="86.0" text="登录密码">
+                           <padding>
+                              <Insets top="7.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="92.0" text="联系电话">
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="152.0" layoutY="15.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="124.0" prefWidth="150.0">
+                     <children>
+                        <TextField fx:id="userName" prefHeight="30.0" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <DatePicker fx:id="age" prefHeight="30.0" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                        <PasswordField fx:id="password" prefHeight="31.0" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <TextField fx:id="telNum" prefHeight="30.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnOk" layoutX="191.0" layoutY="374.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="提    交" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="title" alignment="CENTER" layoutX="5.0" layoutY="7.0" prefHeight="20.0" prefWidth="751.0" style="-fx-background-color: #1C6BA6;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNo" layoutX="330.0" layoutY="374.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="92.0" style="-fx-base: #d9534f;" text="取    消" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

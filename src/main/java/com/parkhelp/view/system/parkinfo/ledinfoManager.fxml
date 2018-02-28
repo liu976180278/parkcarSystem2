@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.system.parkinfo.LedUpdateController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="497.0" prefWidth="783.0" style="-fx-border-width: 5;-fx-border-color: #1C6BA6;">
+         <children>
+            <AnchorPane fx:id="ledPane" layoutX="51.0" layoutY="65.0" prefHeight="364.0" prefWidth="710.0">
+               <children>
+                  <VBox layoutX="34.0" layoutY="14.0" prefHeight="259.0" prefWidth="112.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="LED名称" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="诱导屏IP" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="显示方式" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="显示速度" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="分区宽度" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="分区坐标X" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="字体大小" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="停留时间" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="147.0" layoutY="18.0" prefHeight="268.0" prefWidth="136.0">
+                     <children>
+                        <TextField fx:id="ledname">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="ledip" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="actiontype" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="actionspeed" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="partWidth" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="coordinateX" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="fontsize" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="holdtime" prefHeight="23.0" prefWidth="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="496.0" layoutY="20.0" prefHeight="268.0" prefWidth="136.0">
+                     <children>
+                        <ChoiceBox fx:id="zone_id" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="ledbrand" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="cardaddress" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="numcount" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="partHeight" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="coordinateY" prefHeight="23.0" prefWidth="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <ChoiceBox fx:id="fontbold" prefWidth="150.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="isused" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="383.0" layoutY="16.0" prefHeight="259.0" prefWidth="112.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="136.0" text="所属区域" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="诱导屏型号" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="控制器地址" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="数字位数" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="分区高度" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="分区坐标Y" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="字体粗细" />
+                        <Label prefHeight="41.0" prefWidth="136.0" text="是否启用" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="34.0" layoutY="275.0" prefHeight="41.0" prefWidth="112.0" text="文本模板" />
+                  <TextArea fx:id="texttmp" layoutX="146.0" layoutY="282.0" prefHeight="69.0" prefWidth="487.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnOk" layoutX="269.0" layoutY="442.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="92.0" style="-fx-base: #1C6BA6;" text="提    交" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="title" alignment="CENTER" layoutX="5.0" layoutY="7.0" prefHeight="20.0" prefWidth="751.0" style="-fx-background-color: #1C6BA6;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNo" layoutX="412.0" layoutY="442.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="92.0" style="-fx-base: #d9534f;" text="取    消" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

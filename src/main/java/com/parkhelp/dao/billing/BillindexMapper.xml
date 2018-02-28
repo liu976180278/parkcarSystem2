@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.billing.BillindexMapper">
+	<resultMap id="billindex" type="com.parkhelp.po.billing.Billindex">
+		<id column="id" property="id" />
+		<result column="bill_cardoff" property="bill_cardoff" />
+		<result column="bill_cashoff" property="bill_cashoff" />
+		<result column="bill_gracetime" property="bill_gracetime" />
+		<result column="bill_memberoff" property="bill_memberoff" />
+		<result column="bill_name" property="bill_name" />
+		<result column="createdTime" property="createdTime" />
+		<result column="creater" property="creater" />
+		<result column="dbStatus" property="dbStatus" />
+		<result column="fi_agentid" property="fi_agentid" />
+		<result column="updatedTime" property="updatedTime" />
+		<result column="updater" property="updater" />
+		<result column="cycle" property="cycle" />
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.billing.Billindex"
+		resultMap="billindex">
+		SELECT * FROM t_billindex
+	</select>
+	
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="billindex">
+		SELECT * FROM  t_billindex WHERE id=#{id}
+	</select>
+	
+	<!-- <insert id="addUserInfo" parameterType="com.parkhelp.po.system.UserInfo"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'-', '') from dual
+		</selectKey>
+		insert into t_userinfo(
+		id,
+	 	age,
+	  	createdTime,
+	 	creater,
+		dbStatus,
+	 	loginname,
+		password,
+		remark,
+		role,
+		sex,
+		telnum,
+	 	updatedTime,
+		updater,
+		username,
+		workNo,
+	 	parkid_id,
+	 	batchno,
+	 	work_status
+		)
+		value(
+		#{id},
+	 	#{age},
+	  	#{createdTime},
+	 	#{creater},
+		#{dbStatus},
+	 	#{loginname},
+		#{password},
+		#{remark},
+		#{role},
+		#{sex},
+		#{telnum},
+	 	#{updatedTime},
+		#{updater},
+		#{username},
+		#{workNo},
+	 	#{parkid_id},
+	 	#{batchno},
+	 	#{work_status}
+		)
+	</insert> 
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_userinfo where
+		id=#{id}
+	</delete>
+	<update id="update" parameterType="com.parkhelp.po.system.UserInfo">
+		update t_userinfo set
+	 	age=#{age},
+	  	createdTime=#{createdTime},
+	 	creater=#{creater},
+		dbStatus=#{dbStatus},
+	 	loginname=#{loginname},
+		password=#{password},
+		remark=#{remark},
+		role=#{role},
+		sex=#{sex},
+		telnum=#{telnum},
+	 	updatedTime=#{updatedTime},
+		updater=#{updater},
+		username=#{username},
+		workNo=#{workNo},
+	 	parkid_id=#{parkid_id},
+	 	batchno=#{batchno},
+	 	work_status=#{work_status}
+		where id=#{id}
+	</update> -->
+</mapper>
+
+

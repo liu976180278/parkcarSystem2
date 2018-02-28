@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.parkhelp.dao.system.parkinfo.GateInfoMapper">
+	<resultMap id="gateInfo" type="com.parkhelp.po.system.parkinfo.GateInfo">
+		<id column="id" property="id" />
+		<result column="cameraIp" property="cameraIp" />
+		<result column="camera_brand" property="camera_brand" />
+		<result column="dbStatus" property="dbStatus" />
+		<result column="gatename" property="gatename" />
+		<result column="gateno" property="gateno" />
+		<result column="gatetype" property="gatetype" />
+		<result column="remark" property="remark" />
+		<result column="videoChannelNum" property="videoChannelNum" />
+		<result column="ordernum" property="ordernum" />
+		<result column="led_brand" property="led_brand" />
+		<result column="ledip" property="ledip" />
+		<result column="gategroup" property="gategroup" />
+		<result column="zone_id" property="zone_id" />
+		<result column="parkno_id" property="parkno_id" />
+		<result column="post_id" property="post_id" />
+		<association property="parkinfo"
+			javaType="com.parkhelp.po.system.parkinfo.ParkInfo" column="parkno_id"
+			select="com.parkhelp.dao.system.parkinfo.ParkInfoMapper.findById" />
+		<association property="parkZoneInfo"
+			javaType="com.parkhelp.po.system.parkinfo.ParkZoneInfo" column="zone_id"
+			select="com.parkhelp.dao.system.parkinfo.ParkZoneInfoMapper.findById" />
+		<association property="postInfo"
+			javaType="com.parkhelp.po.system.parkinfo.PostInfo" column="post_id"
+			select="com.parkhelp.dao.system.parkinfo.PostInfoMapper.findById" />
+	</resultMap>
+	<select id="findAll" parameterType="com.parkhelp.po.system.parkinfo.GateInfo"
+		resultMap="gateInfo">
+		SELECT * FROM t_gateinfo
+		<where>
+			<if test="gategroup!=null and gategroup!=''">
+				and gategroup like '%${gategroup}%'
+			</if>
+		</where>
+	</select>
+	<select id="findById" parameterType="java.lang.String"
+		resultMap="gateInfo">
+		SELECT * FROM t_gateinfo WHERE id=#{id}
+	</select>
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_gateinfo where
+		id=#{id}
+	</delete>
+	<update id="update" parameterType="com.parkhelp.po.system.parkinfo.GateInfo">
+		update t_gateinfo set
+		cameraIp=#{cameraIp},
+		camera_brand=#{camera_brand},
+		dbStatus=#{dbStatus},
+		gatename=#{gatename},
+		gateno=#{gateno},
+		gatetype=#{gatetype},
+		remark=#{remark},
+		videoChannelNum=#{videoChannelNum},
+		ordernum=#{ordernum},
+		led_brand=#{led_brand},
+		ledip=#{ledip},
+		gategroup=#{gategroup},
+		zone_id=#{zone_id},
+		parkno_id=#{parkno_id},
+		post_id=#{post_id}
+		where
+		id=#{id}
+	</update>
+	<insert id="add" parameterType="com.parkhelp.po.system.parkinfo.GateInfo"
+		keyProperty="id">
+		<selectKey keyProperty="id" order="BEFORE" resultType="String">
+			select replace(uuid(),'-', '') from dual
+		</selectKey>
+		insert into t_gateinfo(
+		id,
+		cameraIp,
+		camera_brand,
+		dbStatus,
+		gatename,
+		gateno,
+		gatetype,
+		remark,
+		videoChannelNum,
+		ordernum,
+		led_brand,
+		ledip,
+		gategroup,
+		zone_id,
+		parkno_id,
+		post_id
+		)
+		value(
+		#{id},
+		#{cameraIp},
+		#{camera_brand},
+		#{dbStatus},
+		#{gatename},
+		#{gateno},
+		#{gatetype},
+		#{remark},
+		#{videoChannelNum},
+		#{ordernum},
+		#{led_brand},
+		#{ledip},
+		#{gategroup},
+		#{zone_id},
+		#{parkno_id},
+		#{post_id}
+		)
+	</insert>
+
+</mapper>
+
+

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1369.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parkhelp.controller.main.MainController">
+   <children>
+      <AnchorPane id="maintop" layoutX="-2.0" prefHeight="120.0" prefWidth="1375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutY="24.0" prefHeight="90.0" prefWidth="809.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+               <children>
+                  <Pane id="menu_icon" fx:id="viedo" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView61" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/video_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="menu_icon" fx:id="system" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView611" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/calc_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="menu_icon" fx:id="tab3" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView612" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/nopeople_monitor_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="menu_icon" fx:id="tab4" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView613" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/minus_rule_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="menu_icon" fx:id="tab5" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView614" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/statistical_report_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="76.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="menu_icon" fx:id="tab6" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView6141" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/shift_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="menu_icon" fx:id="tab7" prefHeight="90.0" prefWidth="90.0">
+                     <children>
+                        <ImageView fx:id="imageView6142" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/main/exit_sys_normal.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="23.0" prefWidth="70.0" text="系统管理" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <Label layoutX="14.0" layoutY="3.0" prefHeight="15.0" prefWidth="144.0" text="停车场管理系统" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/main/main.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="960.0" prefHeight="29.0" prefWidth="321.0" text="管理员     上班时间：2017/5/20     09：00" textFill="WHITE" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0" />
+            <HBox layoutX="1293.0" prefHeight="30.0" prefWidth="76.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="min" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #9999CC;" text="一" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="close" mnemonicParsing="false" prefHeight="30.0" prefWidth="43.0" style="-fx-background-color: #EA0000;" text="X" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPane" layoutY="120.0" prefHeight="620.0" prefWidth="1369.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0" />
+      <AnchorPane id="mainfoot" layoutY="704.0" prefHeight="60.0" prefWidth="1369.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="mainLabel" layoutX="1014.0" layoutY="1.0" prefHeight="58.0" prefWidth="265.0" textFill="WHITE" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="-1.0" prefHeight="62.0" prefWidth="513.0" text="出口    鄂AE0584" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
